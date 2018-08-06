@@ -237,6 +237,9 @@ public class TabUpdate extends Tab {
 
         buttonAddGameToLib = new Button("->");
         buttonRemoveGameFromLib = new Button("<-");
+        buttonAddGameToLib.disableProperty();
+        buttonRemoveGameFromLib.disableProperty();
+
         FlowPane flowPaneForButtons = new FlowPane();
         flowPaneForButtons.getChildren().add(buttonAddGameToLib);
         flowPaneForButtons.getChildren().add(buttonRemoveGameFromLib);
@@ -336,7 +339,7 @@ public class TabUpdate extends Tab {
     }
 
     private void setGameLibraryHandlers() {
-        buttonAddGameToLib.setOnAction(e -> {
+        /*buttonAddGameToLib.setOnAction(e -> {
             if (selectedPlayer == null) {
                 return;
             }
@@ -353,7 +356,7 @@ public class TabUpdate extends Tab {
             refreshEditables();
             setGameLibraryObservableArrayLists();
         });
-
+*/
     }
 
     private void insertPlayerAndGameToDb(int indexOfSelectedGame) {
